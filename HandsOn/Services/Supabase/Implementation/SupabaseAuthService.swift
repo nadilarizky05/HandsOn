@@ -13,7 +13,7 @@ final class SupabaseAuthService: AuthServicing {
     
     func restoreSession() async throws -> AppUser? {
         do {
-            let session = try await client.auth.signInAnonymously()
+            let session = try await client.auth.session  // ambil session yang sudah ada
             return makeUser(from: session.user)
         } catch {
             return nil

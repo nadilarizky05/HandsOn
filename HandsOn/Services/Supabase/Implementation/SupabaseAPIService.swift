@@ -25,6 +25,7 @@ final class SupabaseAPIService: APIServicing {
         } catch let error as ErrorMessage {
             throw error
         } catch {
+            print("❌ fetchTopics raw error: \(error)")  // tambahkan ini
             throw ErrorMessage.network(error.localizedDescription)
         }
     }

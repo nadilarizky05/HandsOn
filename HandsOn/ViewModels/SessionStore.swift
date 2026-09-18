@@ -27,7 +27,7 @@ final class SessionStore: ObservableObject {
     
     func restoreSessionIfAvailable() async {
         isRestoringSession = true
-        currentUser = try? await auth.restoreSession()
+//        currentUser = try? await auth.restoreSession()
         isRestoringSession = false
     }
     
